@@ -8,14 +8,14 @@ CREATE TABLE Department
 
 CREATE TABLE Store
 (
-  StoreID INT NOT NULL,
+  StoreID VARCHAR(255) NOT NULL,
   StoreAddress VARCHAR(255) NOT NULL,
   PRIMARY KEY (StoreID)
 );
 
 CREATE TABLE Shelves
 (
-  SelfSection VARCHAR(255) NOT NULL,
+  ShelfSection VARCHAR(255) NOT NULL,
   ShelfID INT NOT NULL,
   DeptID INT NOT NULL,
   PRIMARY KEY (ShelfID),
@@ -24,7 +24,7 @@ CREATE TABLE Shelves
 
 CREATE TABLE Customer
 (
-  CustomerPhone INT NOT NULL,
+  CustomerPhone VARCHAR(255) NOT NULL,
   HomeAddress VARCHAR(255) NOT NULL,
   LastName VARCHAR(255) NOT NULL,
   FirstName VARCHAR(255) NOT NULL,
@@ -41,6 +41,7 @@ CREATE TABLE Employee
   Birthday DATE NOT NULL,
   ESSN INT NOT NULL,
   HomeAddress VARCHAR(255) NOT NULL,
+  EmployeePhone VARCHAR(255) NOT NULL,
   Salary INT NOT NULL,
   StoreID INT NOT NULL,
   PRIMARY KEY (EmployeeID),
